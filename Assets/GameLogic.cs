@@ -8,7 +8,8 @@ public class GameLogic : MonoBehaviour {
 	public Text pointsUI;
 
 	private int round = 0;
-	public int points = 0;
+	public int actualPoints = 0;
+	private int points = 0;
 	// Use this for initialization
 	void Start () {
 		pointsUI.text = string.Format("Round: {0} Points: {1}", this.round, this.points);
@@ -16,18 +17,13 @@ public class GameLogic : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 	}
 
 	public void nextRound() {
-		var children = pins.GetComponentsInChildren<Transform> ();
-		for (int i = 0; i < children.Length; i++) {
-			Debug.Log ("Object:" + children[i] + " " + children [i].transform.up.x);
-			if (children [i].transform.up.x < 0.5f) {
-				this.points++;
-				//children [0].gameObject.SetActive (false);
-				pointsUI.text = string.Format ("Round: {0} Points: {1}", this.round, this.points);
-			} 
-		}
+		points += actualPoints;
+		actualPoints = 0;
+		pointsUI.text = string.Format ("Round: {0} Points: {1}", this.round, this.points);
 		round++;
 	}
 }

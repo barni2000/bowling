@@ -7,7 +7,7 @@ public class LevelEndTrigger : MonoBehaviour {
 	public GameObject gameLogic;
 	public GameObject ballGenerator;
 
-	public void OnTriggerEnter(Collider other) {
+	public void OnTriggerExit(Collider other) {
 		if (other.GetType() == ball.GetType()) {
 			Debug.Log ("Level END");
 			gameLogic.GetComponent<GameLogic>().nextRound();

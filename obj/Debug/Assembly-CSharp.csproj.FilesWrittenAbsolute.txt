@@ -22,3 +22,9 @@
 /home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/Unity.CecilTools.dll
 /home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/Unity.Cecil.Pdb.dll
 /home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/Unity.Cecil.Mdb.dll
+/home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/Assembly-CSharp.pdb
+/home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/Assembly-CSharp.dll
+/home/work/Developings/UnityProjects/Bowling/obj/Debug/Assembly-CSharp.dll
+/home/work/Developings/UnityProjects/Bowling/obj/Debug/Assembly-CSharp.pdb
+/home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/ChannelPurchase.dll
+/home/work/Developings/UnityProjects/Bowling/Temp/bin/Debug/UnityStore.dll
