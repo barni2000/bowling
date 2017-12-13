@@ -20,7 +20,6 @@ public class SelectOnInput : MonoBehaviour {
 		if (Input.GetAxisRaw ("Vertical") != 0 && buttonSelected == false) 
 		{
 			eventSystem.SetSelectedGameObject(selectedObject);
-			Debug.Log (selectedObject);
 			buttonSelected = true;
 		}
 	}

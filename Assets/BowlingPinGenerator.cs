@@ -9,6 +9,10 @@ public class BowlingPinGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		generatePins ();
+	}
+
+	public void generatePins() {
 		int padding = 3;
 		int i = 0;
 		int j = 0;

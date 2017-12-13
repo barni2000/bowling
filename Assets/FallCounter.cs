@@ -8,9 +8,8 @@ public class FallCounter : MonoBehaviour {
 
 	public void OnTriggerExit(Collider other) {
 		if (other.GetType() == pin.GetType()) {
-			Debug.Log ("Fall");
-			int points = gameLogic.GetComponent<GameLogic> ().actualPoints++;
-			Debug.Log (points);
+			other.gameObject.SetActive (false);
+			gameLogic.GetComponent<GameLogic> ().actualPoints++;
 		}
 	}
 }

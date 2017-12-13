@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour {
 	public GameObject pins;
+	public GameObject pinGenerator;
 	public Text pointsUI;
 
 	private int round = 0;
@@ -23,7 +24,11 @@ public class GameLogic : MonoBehaviour {
 	public void nextRound() {
 		points += actualPoints;
 		actualPoints = 0;
-		pointsUI.text = string.Format ("Round: {0} Points: {1}", this.round, this.points);
 		round++;
+		pointsUI.text = string.Format ("Round: {0} Points: {1}", this.round, this.points);
+
+		if (points % 10 == 0 && points != 0) {
+			pinGenerator.GetComponent<BowlingPinGenerator> ().generatePins();
+		}
 	}
 }

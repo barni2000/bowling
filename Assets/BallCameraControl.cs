@@ -15,18 +15,20 @@ public class BallCameraControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (canTrace) {
-			//ballCamera.transform.Translate(ball.transform);
-			//ballCamera.transform.up
-			//transform.y = ball.y;
-			//transform.z = ball.y;
+			ballCamera.transform.position = new Vector3 (
+				ball.transform.position.x+10,
+				ball.transform.position.y+10,
+				ball.transform.position.z
+			);
 		}
 	}
 
 	public void trace(Transform ball) {
-		this.ball = ball;
+		if (ball != null) {
+			this.ball = ball;
+		}
 		canTrace = !canTrace;
-		//mainCamera.enabled = !canTrace;
-		//ballCamera.enabled = canTrace;
-		Debug.Log ("Toggle Trace");
+		mainCamera.enabled = !canTrace;
+		ballCamera.enabled = canTrace;
 	}
 }

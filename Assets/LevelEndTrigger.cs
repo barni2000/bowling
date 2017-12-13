@@ -9,9 +9,14 @@ public class LevelEndTrigger : MonoBehaviour {
 
 	public void OnTriggerExit(Collider other) {
 		if (other.GetType() == ball.GetType()) {
-			Debug.Log ("Level END");
 			gameLogic.GetComponent<GameLogic>().nextRound();
 			ballGenerator.GetComponent<BallGenerator> ().canShoot = true;
+		}
+	}
+
+	public void OnTriggerEnter(Collider other) {
+		if (other.GetType () == ball.GetType ()) {
+			gameLogic.GetComponent<BallCameraControl>().trace(null);
 		}
 	}
 }
